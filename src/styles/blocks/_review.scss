@@ -1,0 +1,68 @@
+.review__hidden {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: .3s;
+    padding: 0 20px;
+
+    @include tablets {
+        align-items: center;
+        text-align: center;
+    }
+
+    &:hover {
+        opacity: 1;
+        background-color: rgba($color: #444547, $alpha: .7);
+    }
+}
+
+.review__descr {
+    margin-bottom: 1.5625rem;
+    
+    @include tablets {
+        margin-bottom: 0.75rem;
+    }
+
+    @include phones {
+        display: none;
+    }
+}
+
+.review__image {
+    height: 100%;
+}
+
+.review__image-elem {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.review {
+    position: relative;
+    filter: grayscale(1);
+}
+
+.review__btn {
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        color: white;
+        background-color: #2f3234;
+    }
+}
+
+.review__title {
+    font-family: 'gagalinregular';
+    margin-bottom: 0.75rem;
+}

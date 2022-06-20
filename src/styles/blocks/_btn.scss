@@ -1,0 +1,27 @@
+.btn {
+    text-transform: uppercase;
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'ubuntulight';
+    transition: .3s;
+    font-size: 13px;
+
+    &_orange {
+        background-color: $orange;
+        color: white;
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
+    &_clear {
+        background-color: transparent;
+        color: white;
+        text-transform: capitalize;
+        &:hover {
+            color: $orange;
+        }
+    }
+}

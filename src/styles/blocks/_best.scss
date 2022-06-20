@@ -1,0 +1,18 @@
+.best {
+    background: url("./images/bg/two.jpg") center center / cover no-repeat;
+}
+
+.best__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.best__list {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+
+}

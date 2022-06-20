@@ -1,0 +1,56 @@
+.overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    background-color: #0005;
+    
+    &__container {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        width: 480px;
+        position: relative;
+    }
+
+    &__content {
+        font-family: 'ubuntulight';
+    }
+
+    &__title {
+        font-family: 'gagalinregular';
+        color: black;
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        &:before {
+            display: block;
+            content: '';
+            width: 22px;
+            border-radius: 5px;
+            height: 5px;
+            background-color: $yellow;
+            transform: rotate(45deg);
+        }
+        &:after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 22px;
+            border-radius: 5px;
+            height: 5px;
+            background-color: $yellow;
+            transform: rotate(-45deg);
+            top: 0;
+        }
+    }
+}

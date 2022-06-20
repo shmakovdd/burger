@@ -1,0 +1,78 @@
+.menu {
+    background: url("./images/bg/menu-bg.jpg") center center / cover no-repeat;
+    color: white;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        height: 100%
+    }
+
+    &__link {
+        background: center center/cover no-repeat;
+        width: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__hidden {
+        background-color: rgba($color: #2f3234, $alpha: .8);
+        width: 0;
+        overflow: hidden;
+        transition: .5s;
+        p {
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+
+
+.menu__item_active {
+
+    .menu__hidden {
+        width: 33rem;
+        padding: 25px 37px;
+
+        @include tablets {
+            width: calc(100vw - 153px);
+        }
+
+        @include phones {
+            padding: 0;
+        }
+    }
+
+    .menu__name {
+        color: $yellow;
+    }
+
+    p {
+        opacity: 1;
+        transition: 0.4s;
+        transition-delay: 0.7s;
+    }
+}
+
+    &__name {
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        font-family: 'gagalinregular';
+        font-size: 2rem;
+        pointer-events: none;
+    }
+}

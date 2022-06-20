@@ -1,0 +1,115 @@
+.team {
+    background: url('./images/bg/team-bg.jpg') center center / cover no-repeat;
+    position: relative;
+
+    &__title {
+        
+        @include tablets {
+            text-align: center;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right: 0;
+        background-color: #2f3234;
+        opacity: .9;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 7%;
+
+        @include tablets {
+            width: 100%;
+            right: initial;
+            padding: 0;
+        }
+    }
+
+    &__name {
+        font-family: 'gagalinregular';
+        margin-bottom: 1.0625rem;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            border: 6px solid transparent;
+            border-bottom-width: 0;
+            border-top: 8px solid $yellow;
+            margin-right: 10px;
+
+        }
+    }
+    
+    &__image-wrapper {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 6.8rem;
+        height: 6.8rem;
+        margin-right: 1.875rem;
+        flex-shrink: 0;
+
+        @include tablets {
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__image {
+        height: 100%;
+    }
+
+    &__hidden-wrapper {
+        height: 0;
+        overflow: hidden;
+        transition: height .3s ease-in;
+    }
+
+    &__hidden {
+        display: flex;
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+    &__item {
+        color: white;
+        margin-bottom: 1.875rem;
+
+        @include tablets {
+            text-align: center;
+            padding: 0 20%;
+        }
+
+        @include phones {
+            margin-bottom: 1.1875rem;
+        }
+    }
+
+    &__occupation {
+        font-family: 'ubuntubold';
+    }
+}
+
+.team__item_active {
+
+    .team__hidden-wrapper {
+        height: initial;
+    }
+
+    .team__name {
+        color: $yellow;
+    }
+
+    .team__name:before {
+        border: 6px solid transparent;
+        border-top-width: 0;
+        border-bottom: 8px solid $yellow;
+    }
+}

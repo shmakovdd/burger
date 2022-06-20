@@ -1,0 +1,65 @@
+.footer {
+    background: url('./images/bg/footer-bg.jpg') center center / cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px 50px;
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    &__left, &__right {
+        width: 50%;
+        
+        @include phones {
+            width: initial;
+        }
+    }
+
+    &__left {
+
+        p {
+            color: white;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__adress {
+        margin-bottom: 10px;
+
+        @include phones {
+            margin: 0;
+        }
+    }
+    
+    &__link {
+        display: flex;
+        align-items: center;
+        
+        @include phones {
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__tel-image-wrapper {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+    }
+
+    &__phone {
+        color: $orange;
+        font-family: 'ubuntubold';
+    }
+}

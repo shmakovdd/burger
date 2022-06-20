@@ -1,0 +1,39 @@
+.burgers {
+    background-image: linear-gradient(0deg, #f9b33b 0%, #ea8c38 48%, #f9b33b 74%);
+    color: white;
+
+    &__list {
+        display: flex;
+        transition: .4s ease-in-out;
+    }
+
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__left, &__right {
+        position: absolute;
+        cursor: pointer;
+        width: 40px;
+        height: 15px;
+        transform: rotate(90deg);  
+
+    }
+
+    &__left {
+        left: -4%;
+    }
+
+    &__right {
+        transform: rotate(-90deg);  
+        right: -4%;
+    }
+}
+
+

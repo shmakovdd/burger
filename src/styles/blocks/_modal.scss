@@ -1,0 +1,19 @@
+.modal {
+    display: none;
+    left: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: rgb(70, 67, 67), $alpha: .8);
+    transition: .4s;
+}
+
+.modal_active {
+    display: block;
+
+    .nav_ham {
+        opacity: 1;
+    }
+}
+

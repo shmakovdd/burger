@@ -1,0 +1,9 @@
+.video {
+    background: url('./images/bg/BG.jpg') center center / cover no-repeat;
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

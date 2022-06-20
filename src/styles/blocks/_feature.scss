@@ -1,0 +1,71 @@
+.feature__image {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 1.25rem;
+
+    @include phones {
+        width: 5.5rem;
+        height: 5.5rem;
+        min-width: 5.5rem;
+        min-height: 5.5rem;
+        margin-bottom: 0;
+        margin-right: 0.9375rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 4.9rem;
+        height: 4.9rem;
+        min-width: 4.9rem;
+        min-height: 4.9rem;
+    }
+
+}
+
+.feature__list, .feature {
+    display: flex;
+
+}
+
+.feature {
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 18px);
+    margin-right: 18px;
+
+    @include phones {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        flex-direction: row;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.feature__title {
+    font-family: 'lifehackmedium';
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    @include phones {
+        text-align: start;
+    }
+}
+
+.feature p {
+    font-family: 'ubuntulight';
+    font-size: 1.0625rem;
+    text-align: center;
+
+    @include phones {
+        text-align: start;
+    }
+
+    @media screen and (max-width: 320px){
+        font-size: 1rem;
+    }
+}

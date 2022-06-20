@@ -1,0 +1,82 @@
+.nav__list, .nav__item {
+    display: flex;
+}
+
+.nav {
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav__item {
+
+    align-items: center;
+    font-size: 13px;
+    font-family: 'ubuntulight';
+    margin-right: 14px;
+    text-transform: uppercase;
+
+    &:after {
+        content: "";
+        width: 4px; 
+        height: 4px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: white;
+        margin-left: 14px;
+
+        @media screen and (max-width: 880px) {
+            display: none;
+        }
+    } 
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.nav__link {
+    &:hover {
+        text-decoration: underline;
+        color: $orange;
+    }
+}
+
+.nav_ham {
+    
+    height: 100%;
+    opacity: 0;
+    transition: opacity .2s;
+    transition-delay: .3s;
+
+    @include tablets {
+        display: block;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .nav__item {
+        margin-right: 0;
+        margin-bottom: 0.9375rem;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .nav__link {
+
+        font-size: 2rem;
+        &:active, &:focus {
+            color:  rgb(122, 121, 121);
+            text-decoration: none;
+        }
+    }
+}

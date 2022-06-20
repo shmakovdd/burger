@@ -1,0 +1,63 @@
+.hero {
+    background: url('./images/bg/one.jpg') center center / cover no-repeat;
+    position: relative;
+    line-height: 1;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    flex: .8;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+.hero__image {
+    @include tablets {
+        margin-bottom: 1.25rem;
+        padding: 0 15%;
+    }
+
+    @include phones {
+    
+    }
+}
+
+.hero__text {
+    margin-left: 10px;
+    width: 45%;
+
+    @include tablets { 
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.hero__descr {
+    font-family: 'lifehackmedium';
+    color: white;
+    font-size: 3.4375rem;
+    font-weight: 400;
+
+    @include tablets {
+        font-size: 4.75rem;
+    }
+
+    @include phones {
+        font-size: 3.4rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 2.8rem;
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
